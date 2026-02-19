@@ -5,7 +5,7 @@
 
 pkgname=rocm-gfx1152-nightly
 pkgdesc="ROCm Core SDK and TheRock Build System - Radeon 840M/860M APU"
-pkgver=7.12.0a20260128
+pkgver=7.12.0a20260218
 pkgrel=2
 epoch=0
 arch=('x86_64')
@@ -24,17 +24,17 @@ optdepends=('clinfo')
 options=('!strip')
 
 source=(
-"https://therock-nightly-tarball.s3.amazonaws.com/therock-dist-linux-gfx1152-7.12.0a20260128.tar.gz"
+"https://rocm.nightlies.amd.com/tarball/therock-dist-linux-gfx1152-7.12.0a20260218.tar.gz"
 )
 
 sha256sums=(
-"afe5d1bbd57b1055a67a1b367718423bdaed8cf5e3c1912aa337c708463cb484"
+"1d57cf7e7769138300e114ef52e20cff6b34a1c972089c5302bbfc27ca33874c"
 )
 
 package() {
 
     mkdir -p "${srcdir}/opt/rocm"
-    tar xf therock-dist-linux-gfx1152-7.12.0a20260128.tar.gz -C ${srcdir}/opt/rocm
+    tar xf therock-dist-linux-gfx1152-7.12.0a20260218.tar.gz -C ${srcdir}/opt/rocm
 
     mv "${srcdir}/opt/" "${pkgdir}/"
     #mv "${pkgdir}/opt/rocm-7.1.1" "${pkgdir}/opt/rocm"
